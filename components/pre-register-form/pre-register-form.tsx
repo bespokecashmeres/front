@@ -22,15 +22,6 @@ type SignUpFormType = {
   mobile_number: string;
 };
 
-const DEFAULT_VALUES = {
-  first_name: "",
-  last_name: "",
-  gender_id: "",
-  email: "",
-  country_id: "",
-  mobile_number: "",
-};
-
 const PreRegisterForm = ({
   countries,
   genders,
@@ -39,6 +30,14 @@ const PreRegisterForm = ({
   genders: any[];
 }) => {
   const [disableSubmit, setDisableSubmit] = useState<boolean>(false);
+  const DEFAULT_VALUES = {
+    first_name: "",
+    last_name: "",
+    gender_id: genders?.[0]?.value,
+    email: "",
+    country_id: countries?.[0]?.value,
+    mobile_number: "",
+  };
   const methods = useForm<SignUpFormType>({
     defaultValues: DEFAULT_VALUES,
   });
@@ -51,7 +50,9 @@ const PreRegisterForm = ({
         data
       );
       if (registrationResponse.data.success) {
-        toast.success("Thank you for signing up! You’ve been added to our list and will be the first to know when we launch!");
+        toast.success(
+          "Thank you for signing up! You’ve been added to our list and will be the first to know when we launch!"
+        );
         methods.reset(DEFAULT_VALUES);
       } else {
         toast.error(
