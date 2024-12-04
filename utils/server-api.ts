@@ -15,22 +15,17 @@ export const getCountryList = async () => {
   return filteredRes;
 };
 
-const BIND_LANGUAGE_FULL_NAME: Record<string, string> = {
-  men: "Men",
-  women: "Women",
-} as const;
-
 export const getGenderList = async () => {
-  const res: any = await axios.get(`${CONFIG.apiUrl}/gender/list`, {
+  const res: any = await axios.get(`${CONFIG.apiUrl}/gender/active`, {
     headers: { "Accept-Language": "en" },
   });
 
   const filteredGenderList = res?.data?.data?.map(
     (gender: { _id: string; name: string }) => ({
       value: gender._id,
-      label: `${BIND_LANGUAGE_FULL_NAME[gender.name]}`,
+      label: gender.name,
     })
-  );
+  ) ?? [];
 
   return filteredGenderList;
 };
