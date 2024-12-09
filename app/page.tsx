@@ -6,9 +6,17 @@ export default async function Home() {
   const genders = await getGenderList();
   return (
     <div className="relative h-screen">
+      {/* Mobile Background */}
       <img
-        src="background-3.webp"
-        className="object-cover h-screen w-screen"
+        src="mobile-background.webp"
+        className="object-cover h-screen w-screen sm:hidden"
+        alt="backgroundImg"
+      />
+
+      {/* Desktop Background */}
+      <img
+        src="background.webp"
+        className="object-cover h-screen w-screen hidden sm:block"
         alt="backgroundImg"
       />
       <div className="absolute top-0">
