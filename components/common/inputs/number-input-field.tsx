@@ -36,7 +36,9 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>(
           htmlFor={name}
           className={clsx(
             "flex items-center mb-1 text-sm font-medium",
-            "text-gray-700 dark:text-gray-300",
+            !error && !disabled
+              ? "text-gray-300 dark:text-gray-300 drop-shadow-[0_0_2px_black]"
+              : "",
             error ? "text-red-500 dark:text-red-500" : "",
             disabled ? "opacity-50 cursor-not-allowed" : ""
           )}
@@ -62,24 +64,24 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>(
             className={clsx(
               "w-full p-2 border rounded outline-none",
               endorsement ? "pr-10" : "", // Add padding on the right for the eye button
-              "bg-white text-black border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600",
+              "bg-white text-white drop-shadow-[0_0_2px_black] border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600",
               error
-              ? "border-red-500 dark:border-red-500 focus:border-red-500"
-              : "focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
+                ? "border-red-500 dark:border-red-500 focus:border-red-500"
+                : "focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
               disabled
-              ? "bg-gray-200 text-gray-400 cursor-not-allowed dark:bg-gray-700 dark:text-gray-500 dark:cursor-not-allowed"
-              : "",
+                ? "bg-gray-200 text-gray-400 cursor-not-allowed dark:bg-gray-700 dark:text-gray-500 dark:cursor-not-allowed"
+                : "",
               className
             )}
             {...rest}
           />
           {endorsement && (
-            <div className="absolute right-2 top-2 min-w-[2rem] flex justify-center items-center text-gray-700 dark:text-gray-300">
+            <div className="absolute right-2 top-2 min-w-[2rem] flex justify-center items-center text-gray-300 drop-shadow-[0_0_2px_black] dark:text-gray-300">
               {endorsement}
             </div>
           )}
         </div>
-        {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
+        {error && <p className="mt-1 text-xs text-red-500 drop-shadow-[0_0_2px_black]">{error}</p>}
       </div>
     );
   }

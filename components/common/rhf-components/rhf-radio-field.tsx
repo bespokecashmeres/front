@@ -54,7 +54,7 @@ const RHFRadioGroup: React.FC<RHFRadioGroupProps> = ({
         ))}
       </div>
       {error?.message && (
-        <p className="text-sm text-red-500">{error?.message}</p>
+        <p className="text-sm text-red-500 drop-shadow-[0_0_2px_black]">{error?.message}</p>
       )}
     </div>
   );

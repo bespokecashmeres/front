@@ -33,7 +33,7 @@ const RadioField = React.forwardRef<HTMLInputElement, RadioFieldProps>(
             checked={checked} // Manage checked state
             onChange={() => onChange(value)} // Update value on change
           />
-          <span className="text-sm ml-2">{label}</span>
+          <span className="text-sm ml-2 text-gray-300 drop-shadow-[0_0_2px_black]">{label}</span>
         </label>
         {/* End */}
       </div>
