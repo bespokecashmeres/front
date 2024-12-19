@@ -102,7 +102,7 @@ const PreRegisterForm = ({
               options={countries}
               isClearable={false}
               required
-              className="!bg-transparent !border-indigo-600 focus:!border-indigo-600 !text-gray-100 "
+              className="!bg-transparent !border-teal-100 focus:!border-indigo-600 !text-gray-100 "
             />
             <RHFNumberField
               name="mobile_number"
