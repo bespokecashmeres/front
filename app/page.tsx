@@ -1,4 +1,5 @@
 import { PreRegisterForm } from "@/components";
+import ResponsiveImage from "@/components/common/ResponsiveImage";
 import { getCountryList, getGenderList } from "@/utils/server-api";
 
 export default async function Home() {
@@ -7,11 +8,7 @@ export default async function Home() {
   return (
     <div className="relative h-screen">
       {/* Mobile Background */}
-      <img
-        src="background.webp"
-        className="object-cover h-screen w-screen"
-        alt="backgroundImg"
-      />
+      <ResponsiveImage />
 
       {/* Desktop Background */}
       {/* <img
