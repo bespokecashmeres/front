@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+  
+  .landscape,
+  .portrait {
+    display: none; /* Initially hide both images */
+  }
+  
+  @media (min-width: 768px) {
+    /* For desktops */
+    .landscape {
+      display: block; /* Show landscape image */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* For mobile */
+    .portrait {
+      display: block; /* Show portrait image */
+    }
+  }
+  
