@@ -64,7 +64,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>(
             className={clsx(
               "w-full p-2 border rounded outline-none",
               endorsement ? "pr-10" : "", // Add padding on the right for the eye button
-              "bg-white text-white drop-shadow-[0_0_2px_black] border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600",
+              "bg-white text-white drop-shadow-[0_0_2px_black] border-teal-100 dark:bg-gray-800 dark:text-white dark:border-gray-600",
               error
                 ? "border-red-500 dark:border-red-500 focus:border-red-500"
                 : "focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
