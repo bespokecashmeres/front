@@ -8,31 +8,31 @@ export default async function Home() {
     <div className="relative h-screen">
       {/* Mobile Background */}
       <img
-        src="mobile-background.webp"
-        className="object-cover h-screen w-screen sm:hidden"
+        src="background.webp"
+        className="object-cover h-screen w-screen"
         alt="backgroundImg"
       />
 
       {/* Desktop Background */}
-      <img
+      {/* <img
         src="background.webp"
         className="object-cover h-screen w-screen hidden sm:block"
         alt="backgroundImg"
-      />
+      /> */}
       <div className="absolute top-0">
         <div className="flex min-h-screen w-screen flex-col items-center justify-center">
           {/* Website Name */}
           <header className="mb-6">
-            <h1 className="text-3xl font-bold text-gray-800">
+            <h1 className="text-3xl font-bold text-gray-400 drop-shadow-[0_0_2px_black]">
               Bespoke Cashmeres
             </h1>
           </header>
 
           <div className="bg-transparent shadow-2xl rounded-lg p-8 max-w-md w-full">
-            <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">
+            <h1 className="text-2xl font-bold text-center mb-6 text-gray-400 drop-shadow-[0_0_2px_black]">
               Website Coming Soon!
             </h1>
-            <p className="text-gray-600 text-center mb-6">
+            <p className="text-gray-300 text-center mb-6 drop-shadow-[0_0_2px_black]">
               Be the first to know when we launch. Sign up now!
             </p>
 
