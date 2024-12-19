@@ -39,7 +39,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
           className={clsx(
             "flex items-center mb-1 text-sm font-medium",
             !error && !disabled
-              ? "text-gray-300 dark:text-gray-300 drop-shadow-[0_0_2px_black]"
+              ? "text-white dark:text-white drop-shadow-[0_0_2px_black]"
               : "",
             error ? "text-red-500 dark:text-red-500" : "",
             disabled ? "opacity-50 cursor-not-allowed" : "" // Handle disabled state for label
@@ -63,7 +63,7 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
           disabled={disabled} // Apply disabled state to the input
           className={clsx(
             "w-full p-2 border rounded outline-none",
-            "bg-white text-white drop-shadow-[0_0_2px_black] border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600",
+            "bg-white text-white drop-shadow-[0_0_2px_black] border-teal-100 dark:bg-gray-800 dark:text-white dark:border-gray-600",
             error
               ? "border-red-500 dark:border-red-500"
               : "focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
