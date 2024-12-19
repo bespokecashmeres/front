@@ -54,7 +54,7 @@ const DropdownField = React.forwardRef<HTMLInputElement, DropdownFieldProps>(
       isClearable = true,
       className = "",
       inputColor = "#fff",
-      indicatorColor = "#6366f1",
+      indicatorColor = "teal-100",
     },
     ref
   ) => {
