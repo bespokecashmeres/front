@@ -4,22 +4,22 @@ const ResponsiveImage = () => {
   return (
     <div className="image-container">
       {/* Landscape Image */}
-      <Image
+      <img
         src="/landscape.webp"
         className="landscape"
         alt="Landscape Image"
-        layout="fill"
-        objectFit="cover"
-        priority
+
+      
+        
       />
       {/* Portrait Image */}
-      <Image
+      <img
         src="/portrait.webp"
         className="portrait"
         alt="Portrait Image"
-        layout="fill"
-        objectFit="cover"
-        priority
+    
+     
+        
       />
     </div>
   );
