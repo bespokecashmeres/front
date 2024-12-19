@@ -120,7 +120,7 @@ const PreRegisterForm = ({
           />
         </div>
         <div className="flex items-center justify-end mt-6">
-          <SubmitButton label="Sign Up" disabled={disableSubmit} />
+       <SubmitButton label="Pre Register" disabled={disableSubmit} />
         </div>
       </form>
     </FormProvider>
