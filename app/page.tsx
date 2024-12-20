@@ -2,6 +2,8 @@ import { PreRegisterForm } from "@/components";
 import ResponsiveImage from "@/components/common/ResponsiveImage";
 import { getCountryList, getGenderList } from "@/utils/server-api";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const contries = await getCountryList();
   const genders = await getGenderList();
