@@ -28,7 +28,7 @@ const CustomOption = (props: any) => {
     <div
       ref={innerRef}
       {...innerProps}
-      className="flex items-center py-2 pl-2 bg-gray-100 text-gray-800 drop-shadow-[0_0_2px_black] hover:bg-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-gray-200"
+      className="border-black flex items-center py-2 pl-2 bg-gray-100 text-gray-800 drop-shadow-[0_0_2px_black] hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-600 dark:hover:text-gray-200"
     >
       {data.image && (
         <img src={data.image} alt={data.label} className="w-6 h-6 mr-2" />
@@ -78,7 +78,7 @@ const DropdownField = React.forwardRef<HTMLInputElement, DropdownFieldProps>(
             className={clsx(
               "flex items-center mb-1 text-sm font-medium",
               !error && !disabled
-                ? "text-gray-300 dark:text-gray-300 drop-shadow-[0_0_2px_black]"
+                ? "text-black dark:text-black"
                 : "",
               error ? "text-red-500 dark:text-red-500" : "",
               disabled ? "opacity-50 cursor-not-allowed" : ""
@@ -88,7 +88,7 @@ const DropdownField = React.forwardRef<HTMLInputElement, DropdownFieldProps>(
             {required && <span className="text-red-500 ml-1">*</span>}
             {infoText && (
               <Tooltip className="ml-2">
-                <div className="text-xs text-slate-200 dark:text-slate-200 text-center">
+                <div className="text-xs text-black dark:text-slate-200 text-center">
                   {infoText}
                 </div>
               </Tooltip>
@@ -107,14 +107,14 @@ const DropdownField = React.forwardRef<HTMLInputElement, DropdownFieldProps>(
           hideSelectedOptions
           isSearchable
           components={{ Option: CustomOption }}
-          className="react-select-container shadow-none focus:shadow-none text-white"
+          className="react-select-container border-black shadow-none focus:shadow-none text-black"
           classNames={{
             indicatorsContainer: () => "fill-black dark:fill-white",
             clearIndicator: () => "fill-black dark:fill-white",
             dropdownIndicator: () => "fill-black dark:fill-white",
             control: () =>
               clsx(
-                "text-white drop-shadow-[0_0_2px_black] border-stroke pr-1 py-0.5 dark:border-gray-600 dark:bg-gray-800 outline-none",
+                "text-white border pr-1 py-0.5 dark:border-gray-600 dark:bg-gray-800 outline-none",
                 error
                   ? "!border-red-500 dark:!border-red-500 !text-red-500 dark:!text-red-500"
                   : "",
@@ -126,10 +126,10 @@ const DropdownField = React.forwardRef<HTMLInputElement, DropdownFieldProps>(
             menuList: () =>
               "text-gray-200 bg-gray-100 drop-shadow-[0_0_2px_black] dark:border-gray-200 dark:text-gray-200 dark:bg-gray-800",
             singleValue: () =>
-              "!text-gray-200 drop-shadow-[0_0_2px_black] dark:text-gray-200",
+              "!text-black dark:text-black",
             valueContainer: () => "text-dark dark:text-white",
             placeholder: () =>
-              "!text-gray-200 drop-shadow-[0_0_2px_black] dark:text-gray-300",
+              "!text-black dark:text-black",
           }}
           classNamePrefix="react-select" // Class prefix for custom styling
           styles={{
