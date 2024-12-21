@@ -9,7 +9,7 @@ const SubmitButton = ({
   return (
     <button
       type="submit"
-      className="btn bg-indigo-500 hover:bg-indigo-600 text-white disabled:border-slate-200 dark:disabled:border-slate-700 disabled:bg-slate-100 dark:disabled:bg-slate-800 disabled:text-slate-400 dark:disabled:text-slate-600 disabled:cursor-not-allowed shadow-none p-2 rounded-md"
+      className="uppercase text-sm btn bg-black w-full hover:bg-gray-900 text-white disabled:border-slate-200 dark:disabled:border-slate-700 disabled:bg-slate-100 dark:disabled:bg-slate-800 disabled:text-slate-400 dark:disabled:text-slate-600 disabled:cursor-not-allowed shadow-none p-4 rounded-md"
       disabled={disabled}
     >
       {label}

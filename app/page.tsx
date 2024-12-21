@@ -1,5 +1,6 @@
 import { PreRegisterForm } from "@/components";
 import ResponsiveImage from "@/components/common/ResponsiveImage";
+
 import { getCountryList, getGenderList } from "@/utils/server-api";
 
 export const dynamic = "force-dynamic";
@@ -20,22 +21,14 @@ export default async function Home() {
       /> */}
       <div className="absolute top-0">
         <div className="flex min-h-screen w-screen flex-col items-center justify-center">
-          {/* Website Name */}
-          <header className="mb-6">
-            <h1 className="text-5xl text-center font-bold text-blue-100 drop-shadow-[0_0_2px_black]">
-              Bespoke Cashmeres
-            </h1>
-            <h1 className="text-3xl font-bold text-center mb-6 text-green-100 drop-shadow-[0_0_2px_black]">
-              Website Coming Soon!
-            </h1>
-          </header>
-
-          <div className="bg-transparent shadow-2xl rounded-lg p-8 max-w-md w-full">
-           
-            <p className="text-2xl text-green-100 text-center mb-6 drop-shadow-[0_0_2px_black]">
-              Be the first to know when we launch. Sign up now!
+          <div className="bg-white bg-transparent rounded-lg p-4 max-w-sm mt-10">
+            <img className="mx-auto center max-w-28" src="../logo.png" />
+            <p className="text-2xl text-black mt-4 text-center mb-3 uppercase font-bold">
+              Sign up and Win prizes worth $5.000
             </p>
-
+            <p className="text-sm text-black text-center mb-3">
+              Celebrate the launch of our exclusive cashmere sweater brand! <br/> <span className="font-bold uppercase">BESPOKE CASHAMERES</span> coming soon.  You now have a chance to win $5,000 worth of premium cashmere over the next 2 months. Elevate your wardrobe with timeless luxury sweaters.
+            </p>
             <PreRegisterForm countries={contries} genders={genders} />
           </div>
         </div>

@@ -37,19 +37,14 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         <label
           htmlFor={name}
           className={clsx(
-            "flex items-center mb-1 text-sm font-medium",
-            !error && !disabled
-              ? "text-white dark:text-white drop-shadow-[0_0_2px_black]"
-              : "",
-            error ? "text-red-500 dark:text-red-500" : "",
-            disabled ? "opacity-50 cursor-not-allowed" : "" // Handle disabled state for label
+            "flex items-center mb-1 text-sm font-medium"
           )}
         >
           {label}
           {required && <span className="text-red-500 ml-1">*</span>}
           {infoText && (
             <Tooltip className="ml-2">
-              <div className="text-xs text-slate-200 dark:text-slate-200 text-center drop-shadow-[0_0_2px_black]">
+              <div className="text-xs text-slate-200 dark:text-slate-200 text-center">
                 {infoText}
               </div>
             </Tooltip>
@@ -62,22 +57,14 @@ const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
           name={name}
           disabled={disabled} // Apply disabled state to the input
           className={clsx(
-            "w-full p-2 border rounded outline-none",
-            "bg-white text-white drop-shadow-[0_0_2px_black] border-teal-100 dark:bg-gray-800 dark:text-white dark:border-gray-600",
-            error
-              ? "border-red-500 dark:border-red-500"
-              : "focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
-            disabled
-              ? "bg-gray-200 text-gray-400 drop-shadow-[0_0_2px_black] cursor-not-allowed dark:bg-gray-700 dark:text-gray-400 dark:cursor-not-allowed" // Disabled styles
-              : "",
-            className
+            "w-full p-2 border rounded outline-none"
           )}
           readOnly={readOnly}
           {...(disableTab ? { tabIndex: -1 } : {})}
           {...rest}
         />
         {error && (
-          <p className="mt-1 text-xs text-red-500 drop-shadow-[0_0_2px_black]">
+          <p className="mt-1 text-xs text-red-500">
             {error}
           </p>
         )}

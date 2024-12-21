@@ -70,11 +70,11 @@ const PreRegisterForm = ({
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
-        <div className="space-y-4">
-          <div className="grid gap-5 md:grid-cols-2">
+        <div className="space-y-2">
+          <div className="grid gap-2 md:grid-cols-2">
             <RHFInputField
               name="first_name"
-              className="!bg-transparent border-indigo-600"
+              className="border-black drop-shadow-none shadow-none text-slate-950"
               label="First Name"
               required
             />
@@ -85,7 +85,7 @@ const PreRegisterForm = ({
               required
             />
           </div>
-          <div className="grid gap-5">
+          <div className="grid gap-2">
             <RHFInputField
               name="email"
               label="Email Address"
@@ -94,7 +94,7 @@ const PreRegisterForm = ({
               className="!bg-transparent border-indigo-600"
             />
           </div>
-          <div className="grid gap-5 md:grid-cols-[120px_auto]">
+          <div className="grid gap-2 md:grid-cols-[120px_auto]">
             <RHFFormDropdownField
               label="Phone Code"
               name="country_id"
@@ -102,12 +102,12 @@ const PreRegisterForm = ({
               options={countries}
               isClearable={false}
               required
-              className="!bg-transparent !border-teal-100 focus:!border-indigo-600 !text-gray-100 "
+              className="!bg-transparent border-black focus:border-black text-black"
             />
             <RHFNumberField
               name="mobile_number"
               label="Phone Number"
-              className="!bg-transparent border-indigo-600 focus:border-indigo-600"
+              className="!bg-transparent border-black focus:border-black text-black"
               required
             />
           </div>
@@ -119,7 +119,7 @@ const PreRegisterForm = ({
             className="bg-transparent"
           />
         </div>
-        <div className="flex items-center justify-end mt-6">
+        <div className="flex items-center justify-end mt-3">
        <SubmitButton label="Pre Register" disabled={disableSubmit} />
         </div>
       </form>
