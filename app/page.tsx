@@ -21,7 +21,7 @@ export default async function Home() {
       /> */}
       <div className="absolute top-0">
         <div className="flex min-h-screen w-screen flex-col items-center justify-center">
-          <div className="bg-white bg-transparent rounded-lg p-4 max-w-sm mt-10">
+          <div className="bg-white bg-transparent rounded-lg p-4 max-w-xs xs:max-w-xs md:max-w-sm mt-10">
             <img className="mx-auto center max-w-28" src="../logo.png" />
             <p className="text-2xl text-black mt-4 text-center mb-3 uppercase font-bold">
               Sign up and Win prizes worth $5.000
