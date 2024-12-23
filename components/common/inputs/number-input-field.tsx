@@ -57,7 +57,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>(
             step={step} // Set step for increment/decrement
             disabled={disabled}
             className={clsx(
-              "w-full p-2 border rounded outline-none text-black",
+              "w-full p-2 border rounded outline-none",
               endorsement ? "pr-10" : "", // Add padding on the right for the eye button
               className
             )}
@@ -69,7 +69,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>(
             </div>
           )}
         </div>
-        {error && <p className="mt-1 text-xs text-red-500 drop-shadow-[0_0_2px_black]">{error}</p>}
+        {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
       </div>
     );
   }

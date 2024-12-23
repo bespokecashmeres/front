@@ -35,7 +35,7 @@ const PreRegisterForm = ({
     last_name: "",
     gender_id: genders?.[0]?.value,
     email: "",
-    country_id: countries?.[0]?.value,
+    country_id: "",
     mobile_number: "",
   };
   const methods = useForm<SignUpFormType>({
@@ -47,7 +47,10 @@ const PreRegisterForm = ({
       setDisableSubmit(true);
       const registrationResponse = await axios.post(
         `${CONFIG.apiUrl}/pre-user-registration`,
-        data
+        {
+          ...data,
+          country_id: data?.country_id || null,
+        }
       );
       if (registrationResponse.data.success) {
         toast.success(
@@ -101,14 +104,12 @@ const PreRegisterForm = ({
               placeholder=""
               options={countries}
               isClearable={false}
-              required
               className="!bg-transparent border-black focus:border-black text-black"
             />
             <RHFNumberField
               name="mobile_number"
               label="Phone Number"
               className="!bg-transparent border-black focus:border-black text-black"
-              required
             />
           </div>
           <RHFRadioGroup
@@ -120,7 +121,7 @@ const PreRegisterForm = ({
           />
         </div>
         <div className="flex items-center justify-end mt-3">
-       <SubmitButton label="Pre Register" disabled={disableSubmit} />
+          <SubmitButton label="Pre Register" disabled={disableSubmit} />
         </div>
       </form>
     </FormProvider>
