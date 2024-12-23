@@ -27,7 +27,8 @@ export default async function Home() {
               Sign up and Win prizes worth $5.000
             </p>
             <p className="text-sm text-black text-center mb-3">
-              Celebrate the launch of our exclusive cashmere sweater brand! <br/> <span className="font-bold uppercase">BESPOKE CASHMERES</span> coming soon.  You now have a chance to win $5,000 worth of premium cashmere over the next 2 months. Create your unique cashmere sweater for man or women.
+            Celebrate the launch of our exclusive cashmere sweater brand! <span className="font-bold uppercase">BESPOKE CASHMERES</span> coming soon.
+            You now have a chance to win $5,000 worth of premium cashmere sweaters over the next 2 months. <strong>Create</strong> your unique cashmere sweater for both man or women.
             </p>
             <PreRegisterForm countries={contries} genders={genders} />
           </div>
